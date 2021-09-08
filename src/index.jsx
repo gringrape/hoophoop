@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const root = document.getElementById('root');
+import { Canvas } from '@react-three/fiber';
 
-ReactDOM.render(
-  <h1>Hello, World!!!!!</h1>,
-  root,
-);
+import World from './World.jsx';
+
+function App() {
+  return (
+    <>
+      <Canvas>
+        <World />
+      </Canvas>
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
